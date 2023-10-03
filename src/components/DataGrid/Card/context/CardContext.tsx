@@ -38,10 +38,10 @@ function CardContext({ children }) {
 
   const [modalTitle, setModalTitle] = useState("");
 
-  const [orangeData, setOrangeData] = useAtom(orangeDataAtom);
-  const [purpleData, setPurpleData] = useAtom(purpleDataAtom);
-  const [speciesData, setSpeciesData] = useAtom(yellowDataAtom);
-  const [shipsData, setShipsData] = useAtom(cyanDataAtom);
+  const [orangeData] = useAtom(orangeDataAtom);
+  const [purpleData] = useAtom(purpleDataAtom);
+  const [speciesData] = useAtom(yellowDataAtom);
+  const [shipsData] = useAtom(cyanDataAtom);
 
   const orangeDataColumns = createColumns(currentLanguage, [
     ...orangeColumns,

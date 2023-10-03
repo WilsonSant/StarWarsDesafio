@@ -1,7 +1,8 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { CardProvider } from "./context/CardContext";
-import { Modal, Table } from "antd";
+import { Input, Modal, Table } from "antd";
 import { format, parseISO } from "date-fns";
+import { SearchOutlined } from "@ant-design/icons";
 
 function TableRender() {
   const {
@@ -16,6 +17,12 @@ function TableRender() {
 
   const formatDate = currentLanguage === "pt-br" ? "dd/MM/yyyy" : "MM/dd/yyyy";
 
+  function handleSearch(element) {
+    setSearchData(
+      filterData.filter((item) => item.name.startsWith(element.target.value))
+    );
+  }
+
   const filterData = dataTable.map((item) => {
     return {
       ...item,
@@ -24,14 +31,19 @@ function TableRender() {
     };
   });
 
-  console.log("SHOW TABLE ", showTable)
+  const [searchData, setSearchData] = useState([]);
+
+  useEffect(() => {
+    setSearchData(filterData);
+  }, []);
 
   function handleCancel() {
     cancelButton();
+    setSearchData(filterData);
     setShowTable(false);
   }
 
-  return showTable ? (
+  return (
     <Modal
       className="flex"
       open={showTable}
@@ -39,13 +51,19 @@ function TableRender() {
       footer={null}
       title={modalTitle}
     >
+      <div className="flex flex-row justify-end space-x-5">
+        <Input
+          addonAfter={<SearchOutlined />}
+          onChange={(element) => handleSearch(element)}
+        />
+      </div>
       <Table
-        dataSource={filterData}
+        dataSource={searchData}
         columns={columnsTable}
         pagination={false}
       />
     </Modal>
-  ) : null;
+  );
 }
 
 export default TableRender;
