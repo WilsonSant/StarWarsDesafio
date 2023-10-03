@@ -12,7 +12,7 @@ function Power(props) {
       className="flex flex-row  justify-around space-x-5 cursor-pointer"
       onClick={() => router.push("/")}
     >
-      <Avatar src="/Power.svg" alt="Power" className="" />
+      <Avatar src="/power.svg" alt="Power" className="" />
       <p className="text-[#B34040] text-xl">{powerFields(currentLanguage)}</p>
     </div>
   );
