@@ -1,0 +1,9 @@
+1 - Login
+
+1.1 - Adicionar internalização --- Feito
+1.4   Botão Entrar como Visitante
+1.5   Salvar usuário em cache
+
+2 - Grid Principal
+
+3. Se der tempo, landing page do Login

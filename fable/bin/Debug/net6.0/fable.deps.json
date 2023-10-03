@@ -1,0 +1,41 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "fable/1.0.0": {
+        "dependencies": {
+          "Fable.Core": "4.1.0"
+        },
+        "runtime": {
+          "fable.dll": {}
+        }
+      },
+      "Fable.Core/4.1.0": {
+        "runtime": {
+          "lib/netstandard2.0/Fable.Core.dll": {
+            "assemblyVersion": "4.1.0.0",
+            "fileVersion": "4.1.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "fable/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Fable.Core/4.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-NISAbAVGEcvH2s+vHLSOCzh98xMYx4aIadWacQdWPcQLploxpSQXLEe9SeszUBhbHa73KMiKREsH4/W3q4A4iA==",
+      "path": "fable.core/4.1.0",
+      "hashPath": "fable.core.4.1.0.nupkg.sha512"
+    }
+  }
+}

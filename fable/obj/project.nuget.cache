@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "7PwI+E1I0Uc7v3XI5naCnB33S5G3j2rBXWJ89kjOCIcLvzMjlNHJSOmnJFJz/b0cizUmVCEBikjN6yd9PooiUg==",
+  "success": true,
+  "projectFilePath": "E:\\proj\\swfable\\fable\\fable.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Meu Usuario\\.nuget\\packages\\fable.core\\4.1.0\\fable.core.4.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}
